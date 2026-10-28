@@ -7,7 +7,7 @@ export default function Home() {
       </h1>
       <p className="text-zinc-400">Software Developer · Costa Rica</p>
       <p className="text-sm text-zinc-500">
-        Portfolio in progress<span className="animate-pulse">_</span>
+        Building something new<span className="animate-pulse">_</span>
       </p>
       <a
         href="/cv/CV-Fabian-Rojas-EN.pdf"
