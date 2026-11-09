@@ -18,13 +18,16 @@ export function Hero() {
   };
   const related: Entity[] = [
     { name: "experience", fields: [["softland", ".NET 8, Blazor"], ["plan21", "REST APIs"]] },
-    { name: "stack", fields: [["backend", "C#, Python, Node"], ["data", "PostgreSQL, SQL Server"]] },
+    {
+      name: "stack",
+      fields: Object.entries(profile.stack).map(([group, items]) => [group, items.join(", ")]),
+    },
   ];
 
   return (
     <section
       aria-labelledby="hero-title"
-      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.1fr] lg:py-24"
+      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.25fr] lg:py-24"
     >
       <div className="flex flex-col gap-6">
         {profile.openToWork && (
@@ -56,25 +59,22 @@ export function Hero() {
         </div>
       </div>
 
-      <figure className="relative grid gap-8 sm:grid-cols-2">
+      <figure className="grid items-start gap-8 sm:grid-cols-[4fr_5fr] sm:gap-y-0">
         <figcaption className="sr-only">{t("diagramCaption")}</figcaption>
-        {/* Relation lines sit behind the tables, which paint over their own segments */}
-        <svg
-          aria-hidden
-          className="pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
-          preserveAspectRatio="none"
-          viewBox="0 0 100 100"
-        >
-          <path
-            d="M50 42 V50 H25 V58 M50 50 H75 V58"
-            fill="none"
-            stroke="var(--edge)"
-            strokeWidth="1"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
         <div className="sm:col-span-2 sm:mx-auto sm:w-3/4">
           <EntityTable entity={developer} />
+        </div>
+        {/* Relation lines: a subgrid row so each branch lands on its column's center */}
+        <div aria-hidden className="relative col-span-2 hidden h-10 sm:grid sm:grid-cols-subgrid">
+          <span className="absolute top-0 left-1/2 h-1/2 border-l border-edge" />
+          <div className="relative">
+            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-edge" />
+            <span className="absolute top-1/2 -right-8 left-1/2 border-t border-edge" />
+          </div>
+          <div className="relative">
+            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-edge" />
+            <span className="absolute top-1/2 right-1/2 left-0 border-t border-edge" />
+          </div>
         </div>
         {related.map((entity) => (
           <EntityTable key={entity.name} entity={entity} />

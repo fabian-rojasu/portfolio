@@ -12,6 +12,13 @@ export const profile = {
     es: "/cv/CV-Fabian-Rojas-ES.pdf",
   },
   openToWork: true,
+  stack: {
+    languages: ["Python", "TypeScript", "JavaScript", "C#", "Java", "SQL", "HTML/CSS"],
+    backend: ["Node.js", "FastAPI", "ASP.NET Core", ".NET 8", "REST"],
+    frontend: ["React", "Vue", "Angular", "Blazor"],
+    databases: ["PostgreSQL", "SQL Server", "Firebase"],
+    devops: ["Git", "Docker", "NGINX", "Linux", "Postman"],
+  },
 } as const;
 
 export type Locale = keyof typeof profile.cv;
