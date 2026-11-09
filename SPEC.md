@@ -59,14 +59,18 @@ Además, el sitio servirá como vitrina para los proyectos nuevos que Fabián co
   6. Contact (contacto)
 - `/[locale]/work/[slug]` — caso de estudio: contexto, problema, arquitectura (diagrama), decisiones técnicas, resultados, stack y enlaces (si existen).
 - Además: 404 personalizada, `sitemap.xml`, `robots.txt`, metadatos SEO por idioma con `hreflang` e imagen Open Graph.
-- **Estilo:** minimalista técnico. Tema oscuro, Geist Sans + Geist Mono, acentos tipo terminal y animaciones sutiles que respetan `prefers-reduced-motion`.
+- **Estilo:** dirección **B "Schema"** (elegida en la Fase 3, 2026-11-09). El perfil y la carrera se presentan como un modelo de datos.
+  - Tokens en `app/globals.css`: grafito `#11161C` con una cuadrícula de puntos `#1D252E`, bordes `#2A3542`, texto tiza `#DCE3EA` / `#A9B4BF`, apagado `#75818E` y un único acento azul señal `#7FB7FF`. Todos cumplen contraste AA.
+  - Tipografía: IBM Plex Sans para el texto e IBM Plex Mono para los diagramas y datos.
+  - Elemento distintivo: tablas de entidades (`components/ui/entity-table.tsx`) unidas por líneas de relación. Se reutilizan en los casos de estudio para explicar arquitecturas.
+  - Animación mínima, que respeta `prefers-reduced-motion`.
 
 ## Tech Stack
 Las versiones exactas se fijan en `package.json` al crear el proyecto, consultando Context7.
 - Next.js 16.4.3 (App Router, TypeScript estricto), React 19.3
 - Tailwind CSS v4
-- next-intl (rutas `/en` y `/es`)
-- motion (animaciones)
+- next-intl 4.14 (rutas `/en` y `/es`, `proxy.ts`, locale vía `next/root-params`; se monta en el primer PR de la Fase 4, no en la Fase 5)
+- motion (animaciones): solo si una sección lo necesita; pedir confirmación antes de añadirla
 - @vercel/analytics y @vercel/speed-insights
 - @playwright/test (pruebas e2e)
 - Node 24 (nvm) y npm

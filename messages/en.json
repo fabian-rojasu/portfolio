@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Fabián Rojas Ugalde — Software Developer",
+    "description": "Backend-focused software developer in Costa Rica. I build APIs and data-driven systems with .NET, Python/FastAPI, and Node.js."
+  },
+  "header": {
+    "home": "Fabián Rojas, home",
+    "language": "Language",
+    "cv": "CV"
+  },
+  "hero": {
+    "intro": "I design and build backend systems: APIs, data models, and the migrations that keep them running. Computer Engineer from TEC, based in Costa Rica.",
+    "availability": "Open to remote roles and hybrid roles in Costa Rica",
+    "downloadCv": "Download CV",
+    "email": "Email me",
+    "diagramCaption": "My profile drawn as a data model: a developer entity related to experience and stack.",
+    "role": "Software Developer"
+  },
+  "footer": {
+    "builtWith": "Built with Next.js and deployed on Vercel."
+  }
+}
