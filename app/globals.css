@@ -1,18 +1,47 @@
 @import "tailwindcss";
 
+/* Direction B "Schema": graphite canvas with a dot grid, chalk text, one signal-blue accent. */
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --graphite: #11161c;
+  --grid: #1d252e;
+  --edge: #2a3542;
+  --chalk: #dce3ea;
+  --chalk-dim: #a9b4bf;
+  --muted: #75818e;
+  --signal: #7fb7ff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-graphite: var(--graphite);
+  --color-grid: var(--grid);
+  --color-edge: var(--edge);
+  --color-chalk: var(--chalk);
+  --color-chalk-dim: var(--chalk-dim);
+  --color-muted: var(--muted);
+  --color-signal: var(--signal);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--graphite);
+  background-image: radial-gradient(var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--chalk);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
