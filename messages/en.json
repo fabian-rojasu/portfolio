@@ -1,12 +1,20 @@
 {
   "metadata": {
     "title": "Fabián Rojas Ugalde — Software Developer",
-    "description": "Backend-focused software developer in Costa Rica. I build APIs and data-driven systems with .NET, Python/FastAPI, and Node.js."
+    "description": "Backend-focused software developer in Costa Rica. I build APIs and data-driven systems with .NET, Python/FastAPI, and Node.js.",
+    "ogAlt": "Fabián Rojas Ugalde, Software Developer"
   },
   "header": {
     "home": "Fabián Rojas, home",
     "language": "Language",
-    "cv": "CV"
+    "cv": "CV",
+    "nav": {
+      "about": "About",
+      "work": "Work",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "navLabel": "Sections"
   },
   "hero": {
     "intro": "I design and build backend systems: APIs, data models, and the migrations that keep them running. Computer Engineer from TEC, based in Costa Rica.",
@@ -14,7 +22,139 @@
     "downloadCv": "Download CV",
     "email": "Email me",
     "diagramCaption": "My profile drawn as a data model: a developer entity related to experience and stack.",
-    "role": "Software Developer"
+    "role": "Software Developer",
+    "seeWork": "See my work"
+  },
+  "about": {
+    "label": "about",
+    "title": "Backend first, end to end when it counts",
+    "body": [
+      "I'm a Computer Engineer from the Instituto Tecnológico de Costa Rica (TEC). Most of my work happens on the backend: designing REST APIs, modelling data, and moving legacy systems onto modern platforms without breaking what already works.",
+      "At Softland I migrated an ERP module from .NET Framework to Blazor on .NET 8. At Fundación Plan21 I built the APIs behind agricultural planning tools, including carbon footprint and evapotranspiration calculations.",
+      "I'm comfortable on the frontend too, with React and Vue, when a feature needs to go from the database to the screen."
+    ],
+    "factsCaption": "Quick facts",
+    "facts": {
+      "education": "B.Sc. Computer Engineering, TEC",
+      "focus": "APIs, data models, migrations",
+      "languages": "Spanish (native), English (professional)"
+    }
+  },
+  "stack": {
+    "label": "stack",
+    "title": "Tools I work with",
+    "intro": "Grouped the same way as my CV. Backend and data are where I spend most of my time.",
+    "groups": {
+      "languages": "Languages",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "databases": "Databases",
+      "devops": "DevOps & tooling"
+    }
+  },
+  "work": {
+    "label": "work",
+    "title": "Selected work",
+    "intro": "Case studies from my professional experience, written at the architecture level. Client code and data stay confidential.",
+    "readCase": "Read case study",
+    "kinds": {
+      "work": "professional",
+      "personal": "personal project"
+    }
+  },
+  "experience": {
+    "label": "experience",
+    "title": "Where I've worked and studied",
+    "present": "Present",
+    "groups": {
+      "work": "Experience",
+      "education": "Education",
+      "certifications": "Certifications"
+    },
+    "items": {
+      "softland": {
+        "role": "Backend / Web Developer (graduation internship)",
+        "bullets": [
+          "Migrated the Alerts module of the Softland ERP from legacy .NET Framework to a Blazor web application on ASP.NET Core / .NET 8, used across the company's enterprise client base.",
+          "Built a secure, cross-platform web application with C#, .NET 8 and DevExpress 24.2, replacing a desktop-only legacy interface.",
+          "Built a database-driven REPX report management system that removed file-based report storage and cut report deployment effort by an estimated 30%."
+        ]
+      },
+      "plan21": {
+        "role": "Backend Developer",
+        "bullets": [
+          "Developed backend endpoints for an agricultural management platform supporting land-use planning and planting-time estimation for multiple farms.",
+          "Built API functions to calculate crop carbon footprint and evapotranspiration, supporting data-driven irrigation and planting decisions."
+        ]
+      }
+    },
+    "education": {
+      "itcr": "B.Sc. in Computer Engineering",
+      "ctp": "Associate Degree in Computer Support"
+    }
+  },
+  "contact": {
+    "label": "contact",
+    "title": "Let's build something",
+    "body": "I'm open to backend and full-stack roles, remote or hybrid in Costa Rica. The fastest way to reach me is email.",
+    "emailCta": "Send an email",
+    "cv": "Download CV"
+  },
+  "caseStudy": {
+    "back": "All work",
+    "meta": {
+      "company": "company",
+      "role": "role",
+      "period": "period",
+      "stack": "stack"
+    },
+    "context": "Context",
+    "problem": "Problem",
+    "architecture": "Architecture",
+    "architectureNote": "Simplified, architecture-level view. No client code or data is shown.",
+    "decisions": "Technical decisions",
+    "results": "Results",
+    "next": "Next case study"
+  },
+  "projects": {
+    "softland-alerts": {
+      "title": "Moving an ERP module from desktop to the web",
+      "summary": "Migrated the Alerts module of the Softland ERP from .NET Framework to Blazor on .NET 8 and moved report storage into the database.",
+      "role": "Backend / Web Developer (internship)",
+      "context": "Softland builds an ERP used by enterprise clients. Its Alerts module still ran on legacy .NET Framework with a desktop-only interface, and its REPX reports were stored as files that had to be shipped with every deployment.",
+      "problem": "The module had to reach users on any platform through the browser, without breaking how existing clients already used alerts, and report changes needed to stop depending on file deployments.",
+      "decisions": [
+        "Blazor on ASP.NET Core / .NET 8 kept the whole module in C#, so the existing domain logic and the team's skills carried over to the web.",
+        "DevExpress 24.2 components provided the grids and reporting the ERP already relied on, keeping the new UI familiar to existing users.",
+        "REPX report definitions moved from files into the database, so a report can be added or updated as data instead of as part of a release."
+      ],
+      "results": [
+        "The Alerts module runs as a cross-platform web application that replaces the desktop-only interface.",
+        "File-based report storage was removed.",
+        "Report deployment effort dropped by an estimated 30%."
+      ]
+    },
+    "plan21-agro-api": {
+      "title": "APIs for data-driven farm planning",
+      "summary": "Backend endpoints for an agricultural platform: land-use planning, planting-time estimation, and carbon footprint and evapotranspiration calculations.",
+      "role": "Backend Developer",
+      "context": "Fundación Plan21 runs an agricultural management platform that helps farms plan how they use their land and when to plant.",
+      "problem": "Irrigation and planting decisions needed numbers behind them: how much water a crop loses to evapotranspiration and what its carbon footprint is, computed consistently for many farms.",
+      "decisions": [
+        "Calculations were exposed as API functions instead of living in each client, so every feature of the platform gets the same results.",
+        "Farm and crop data lives in a relational database, which keeps the relationships between farms, land use and crops explicit and queryable.",
+        "Endpoints follow REST conventions, which keeps the platform's consumers simple and the API easy to extend with new calculations."
+      ],
+      "results": [
+        "Land-use planning and planting-time estimation available for multiple farms.",
+        "Carbon footprint and evapotranspiration figures supporting irrigation and planting decisions."
+      ]
+    }
+  },
+  "notFound": {
+    "title": "404: route not found",
+    "body": "This page doesn't exist or was moved.",
+    "home": "Back to home"
   },
   "footer": {
     "builtWith": "Built with Next.js and deployed on Vercel."

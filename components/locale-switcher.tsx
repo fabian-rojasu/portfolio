@@ -20,7 +20,7 @@ export function LocaleSwitcher() {
           aria-current={locale === current ? "true" : undefined}
           // Keep the section the reader is on when switching language
           onClick={() => router.replace(`${pathname}${window.location.hash}`, { locale })}
-          className="px-2 py-1 text-muted uppercase transition-colors hover:text-chalk aria-[current]:text-signal"
+          className="px-2 py-1 text-muted uppercase decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-ink aria-[current]:text-ink aria-[current]:underline"
         >
           {locale}
         </button>

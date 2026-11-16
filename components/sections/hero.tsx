@@ -27,34 +27,34 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.25fr] lg:py-24"
+      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.25fr] lg:py-20"
     >
       <div className="flex flex-col gap-6">
         {profile.openToWork && (
-          <p className="flex items-center gap-2 text-sm text-chalk-dim">
-            <span aria-hidden className="size-2 rounded-full bg-signal" />
+          <p className="flex items-center gap-2 text-sm text-ink-dim">
+            <span aria-hidden className="size-2 rounded-full bg-accent" />
             {t("availability")}
           </p>
         )}
         <h1
           id="hero-title"
-          className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] font-light tracking-[-0.02em]"
+          className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] font-light tracking-[-0.02em] text-ink"
         >
           {profile.name}
         </h1>
-        <p className="max-w-[46ch] text-lg leading-relaxed text-chalk-dim">{t("intro")}</p>
+        <p className="max-w-[46ch] text-lg leading-relaxed text-ink-dim">{t("intro")}</p>
         <div className="flex flex-wrap gap-3 text-sm">
           <a
-            href={profile.cv[locale]}
-            className="bg-signal px-5 py-3 font-semibold text-graphite transition-colors hover:bg-chalk"
+            href="#work"
+            className="bg-accent-strong px-5 py-3 font-semibold text-white transition-colors hover:bg-ink"
           >
-            {t("downloadCv")}
+            {t("seeWork")}
           </a>
           <a
-            href={`mailto:${profile.email}`}
-            className="border border-edge px-5 py-3 transition-colors hover:border-chalk"
+            href={profile.cv[locale]}
+            className="border border-ink px-5 py-3 font-semibold transition-colors hover:bg-ink hover:text-on-ink"
           >
-            {t("email")}
+            {t("downloadCv")}
           </a>
         </div>
       </div>
@@ -66,14 +66,14 @@ export function Hero() {
         </div>
         {/* Relation lines: a subgrid row so each branch lands on its column's center */}
         <div aria-hidden className="relative col-span-2 hidden h-10 sm:grid sm:grid-cols-subgrid">
-          <span className="absolute top-0 left-1/2 h-1/2 border-l border-edge" />
+          <span className="absolute top-0 left-1/2 h-1/2 border-l border-ink" />
           <div className="relative">
-            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-edge" />
-            <span className="absolute top-1/2 -right-8 left-1/2 border-t border-edge" />
+            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-ink" />
+            <span className="absolute top-1/2 -right-8 left-1/2 border-t border-ink" />
           </div>
           <div className="relative">
-            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-edge" />
-            <span className="absolute top-1/2 right-1/2 left-0 border-t border-edge" />
+            <span className="absolute top-1/2 bottom-0 left-1/2 border-l border-ink" />
+            <span className="absolute top-1/2 right-1/2 left-0 border-t border-ink" />
           </div>
         </div>
         {related.map((entity) => (

@@ -1,42 +1,59 @@
 @import "tailwindcss";
 
-/* Direction B "Schema": graphite canvas with a dot grid, chalk text, one signal-blue accent. */
+/*
+ * Direction B "Schema", cream palette (60-30-10):
+ * 60 cream canvas, 30 ink (text, tables, solid blocks), 10 burnt orange on key points.
+ * accent (#D9541E) is for shapes and large marks; accent-strong carries white text at AA.
+ */
 :root {
-  --graphite: #11161c;
-  --grid: #1d252e;
-  --edge: #2a3542;
-  --chalk: #dce3ea;
-  --chalk-dim: #a9b4bf;
-  --muted: #75818e;
-  --signal: #7fb7ff;
+  --canvas: #f3eee3;
+  --surface: #faf7f0;
+  --grid: #d9d1c1;
+  --ink: #111111;
+  --ink-dim: #3f3b35;
+  --muted: #6b6558;
+  --on-ink: #f3eee3;
+  --on-ink-dim: #a8a193;
+  --ink-line: #34312c;
+  --accent: #d9541e;
+  --accent-strong: #c24a1a;
 }
 
 @theme inline {
-  --color-graphite: var(--graphite);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
   --color-grid: var(--grid);
-  --color-edge: var(--edge);
-  --color-chalk: var(--chalk);
-  --color-chalk-dim: var(--chalk-dim);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
   --color-muted: var(--muted);
-  --color-signal: var(--signal);
+  --color-on-ink: var(--on-ink);
+  --color-on-ink-dim: var(--on-ink-dim);
+  --color-ink-line: var(--ink-line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--graphite);
+  background-color: var(--canvas);
   background-image: radial-gradient(var(--grid) 1px, transparent 1px);
   background-size: 24px 24px;
-  color: var(--chalk);
+  color: var(--ink);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
 }
 
 :focus-visible {
-  outline: 2px solid var(--signal);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
