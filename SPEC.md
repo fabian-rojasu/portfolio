@@ -60,7 +60,9 @@ Además, el sitio servirá como vitrina para los proyectos nuevos que Fabián co
 - `/[locale]/work/[slug]` — caso de estudio: contexto, problema, arquitectura (diagrama), decisiones técnicas, resultados, stack y enlaces (si existen).
 - Además: 404 personalizada, `sitemap.xml`, `robots.txt`, metadatos SEO por idioma con `hreflang` e imagen Open Graph.
 - **Estilo:** dirección **B "Schema"** (elegida en la Fase 3, 2026-11-09). El perfil y la carrera se presentan como un modelo de datos.
-  - Tokens en `app/globals.css`: grafito `#11161C` con una cuadrícula de puntos `#1D252E`, bordes `#2A3542`, texto tiza `#DCE3EA` / `#A9B4BF`, apagado `#75818E` y un único acento azul señal `#7FB7FF`. Todos cumplen contraste AA.
+  - Paleta crema (cambiada el 2026-11-16) con proporción 60-30-10: 60 % crema `#F3EEE3` (fondo, con cuadrícula de puntos `#D9D1C1`), 30 % tinta `#111111` (texto, bordes, tabla `developer`, botón CV del encabezado y pie) y 10 % naranja quemado solo en puntos clave. Tokens en `app/globals.css`.
+  - Naranja `#D9541E` para formas y marcas (punto de disponibilidad, sombra de la tabla `developer`, subrayado del idioma activo, foco); `#C24A1A` para el botón principal con texto blanco (4.9:1). El naranja nunca se usa como texto pequeño sobre crema (3.47:1).
+  - Texto secundario `#3F3B35` y apagado `#6B6558`. Todas las combinaciones de texto cumplen contraste AA.
   - Tipografía: IBM Plex Sans para el texto e IBM Plex Mono para los diagramas y datos.
   - Elemento distintivo: tablas de entidades (`components/ui/entity-table.tsx`) unidas por líneas de relación. Se reutilizan en los casos de estudio para explicar arquitecturas.
   - Animación mínima, que respeta `prefers-reduced-motion`.
