@@ -5,7 +5,7 @@ export function SiteFooter() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-ink text-sm text-on-ink-dim">
+    <footer className="border-t border-ink-line bg-ink text-sm text-on-ink-dim">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-8 sm:px-10">
         <p>{t("builtWith")}</p>
         <ul className="flex gap-5">

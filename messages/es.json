@@ -1,12 +1,20 @@
 {
   "metadata": {
     "title": "Fabián Rojas Ugalde — Desarrollador de software",
-    "description": "Desarrollador de software enfocado en backend, en Costa Rica. Construyo APIs y sistemas basados en datos con .NET, Python/FastAPI y Node.js."
+    "description": "Desarrollador de software enfocado en backend, en Costa Rica. Construyo APIs y sistemas basados en datos con .NET, Python/FastAPI y Node.js.",
+    "ogAlt": "Fabián Rojas Ugalde, Desarrollador de software"
   },
   "header": {
     "home": "Fabián Rojas, inicio",
     "language": "Idioma",
-    "cv": "CV"
+    "cv": "CV",
+    "nav": {
+      "about": "Sobre mí",
+      "work": "Trabajo",
+      "experience": "Experiencia",
+      "contact": "Contacto"
+    },
+    "navLabel": "Secciones"
   },
   "hero": {
     "intro": "Diseño y construyo sistemas backend: APIs, modelos de datos y las migraciones que los mantienen funcionando. Ingeniero en Computadores del TEC, en Costa Rica.",
@@ -14,7 +22,139 @@
     "downloadCv": "Descargar CV",
     "email": "Escríbeme",
     "diagramCaption": "Mi perfil dibujado como un modelo de datos: una entidad developer relacionada con experiencia y stack.",
-    "role": "Desarrollador de software"
+    "role": "Desarrollador de software",
+    "seeWork": "Ver mi trabajo"
+  },
+  "about": {
+    "label": "sobre mí",
+    "title": "Backend primero, de punta a punta cuando hace falta",
+    "body": [
+      "Soy Ingeniero en Computadores del Instituto Tecnológico de Costa Rica (TEC). La mayor parte de mi trabajo está en el backend: diseñar APIs REST, modelar datos y llevar sistemas heredados a plataformas modernas sin romper lo que ya funciona.",
+      "En Softland migré un módulo de un ERP de .NET Framework a Blazor sobre .NET 8. En la Fundación Plan21 construí las APIs detrás de herramientas de planificación agrícola, incluido el cálculo de huella de carbono y de evapotranspiración.",
+      "También me desenvuelvo en el frontend, con React y Vue, cuando una funcionalidad tiene que ir de la base de datos a la pantalla."
+    ],
+    "factsCaption": "Datos rápidos",
+    "facts": {
+      "education": "Ingeniería en Computadores, TEC",
+      "focus": "APIs, modelos de datos, migraciones",
+      "languages": "Español (nativo), inglés (profesional)"
+    }
+  },
+  "stack": {
+    "label": "stack",
+    "title": "Herramientas con las que trabajo",
+    "intro": "Agrupadas igual que en mi CV. El backend y los datos son donde paso la mayor parte del tiempo.",
+    "groups": {
+      "languages": "Lenguajes",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "databases": "Bases de datos",
+      "devops": "DevOps y herramientas"
+    }
+  },
+  "work": {
+    "label": "trabajo",
+    "title": "Trabajo destacado",
+    "intro": "Casos de estudio de mi experiencia profesional, contados a nivel de arquitectura. El código y los datos de los clientes son confidenciales.",
+    "readCase": "Leer caso de estudio",
+    "kinds": {
+      "work": "profesional",
+      "personal": "proyecto personal"
+    }
+  },
+  "experience": {
+    "label": "experiencia",
+    "title": "Dónde he trabajado y estudiado",
+    "present": "Actualidad",
+    "groups": {
+      "work": "Experiencia",
+      "education": "Educación",
+      "certifications": "Certificaciones"
+    },
+    "items": {
+      "softland": {
+        "role": "Backend / Web Developer (práctica de graduación)",
+        "bullets": [
+          "Migré el módulo de Alertas del ERP de Softland de .NET Framework a una aplicación web en Blazor sobre ASP.NET Core / .NET 8, usada por la cartera de clientes empresariales de la compañía.",
+          "Construí una aplicación web segura y multiplataforma con C#, .NET 8 y DevExpress 24.2, que reemplaza una interfaz heredada solo de escritorio.",
+          "Desarrollé un sistema de gestión de informes REPX basado en base de datos que eliminó el almacenamiento en archivos y redujo el esfuerzo de despliegue de informes en un 30 % estimado."
+        ]
+      },
+      "plan21": {
+        "role": "Backend Developer",
+        "bullets": [
+          "Desarrollé endpoints para una plataforma de gestión agrícola que apoya la planificación del uso del suelo y la estimación de épocas de siembra en varias fincas.",
+          "Construí funciones de API para calcular la huella de carbono de los cultivos y la evapotranspiración, como apoyo a decisiones de riego y siembra basadas en datos."
+        ]
+      }
+    },
+    "education": {
+      "itcr": "Licenciatura en Ingeniería en Computadores",
+      "ctp": "Técnico en Soporte Informático"
+    }
+  },
+  "contact": {
+    "label": "contacto",
+    "title": "Construyamos algo",
+    "body": "Estoy abierto a puestos de backend y full-stack, remotos o híbridos en Costa Rica. La forma más rápida de contactarme es por email.",
+    "emailCta": "Enviar un email",
+    "cv": "Descargar CV"
+  },
+  "caseStudy": {
+    "back": "Todo el trabajo",
+    "meta": {
+      "company": "empresa",
+      "role": "rol",
+      "period": "periodo",
+      "stack": "stack"
+    },
+    "context": "Contexto",
+    "problem": "Problema",
+    "architecture": "Arquitectura",
+    "architectureNote": "Vista simplificada, a nivel de arquitectura. No se muestra código ni datos del cliente.",
+    "decisions": "Decisiones técnicas",
+    "results": "Resultados",
+    "next": "Siguiente caso de estudio"
+  },
+  "projects": {
+    "softland-alerts": {
+      "title": "Llevar un módulo de ERP del escritorio a la web",
+      "summary": "Migré el módulo de Alertas del ERP de Softland de .NET Framework a Blazor sobre .NET 8 y pasé el almacenamiento de informes a la base de datos.",
+      "role": "Backend / Web Developer (práctica)",
+      "context": "Softland desarrolla un ERP que usan clientes empresariales. Su módulo de Alertas seguía en .NET Framework con una interfaz solo de escritorio, y sus informes REPX se guardaban como archivos que había que distribuir en cada despliegue.",
+      "problem": "El módulo tenía que llegar a los usuarios desde el navegador en cualquier plataforma, sin romper cómo los clientes ya usaban las alertas, y los cambios de informes debían dejar de depender del despliegue de archivos.",
+      "decisions": [
+        "Blazor sobre ASP.NET Core / .NET 8 mantuvo todo el módulo en C#, de modo que la lógica de dominio existente y la experiencia del equipo se trasladaron a la web.",
+        "Los componentes de DevExpress 24.2 aportaron las tablas y los informes en los que el ERP ya se apoyaba, y la nueva interfaz resultó familiar para los usuarios.",
+        "Las definiciones de informes REPX pasaron de archivos a la base de datos, así un informe se agrega o actualiza como un dato y no como parte de una versión."
+      ],
+      "results": [
+        "El módulo de Alertas funciona como aplicación web multiplataforma y reemplaza la interfaz solo de escritorio.",
+        "Se eliminó el almacenamiento de informes en archivos.",
+        "El esfuerzo de despliegue de informes bajó en un 30 % estimado."
+      ]
+    },
+    "plan21-agro-api": {
+      "title": "APIs para planificar fincas con datos",
+      "summary": "Endpoints para una plataforma agrícola: planificación del uso del suelo, estimación de épocas de siembra y cálculo de huella de carbono y evapotranspiración.",
+      "role": "Backend Developer",
+      "context": "La Fundación Plan21 tiene una plataforma de gestión agrícola que ayuda a las fincas a planificar el uso de su terreno y el momento de siembra.",
+      "problem": "Las decisiones de riego y siembra necesitaban números detrás: cuánta agua pierde un cultivo por evapotranspiración y cuál es su huella de carbono, calculados de forma consistente para muchas fincas.",
+      "decisions": [
+        "Los cálculos se expusieron como funciones de la API en lugar de vivir en cada cliente, así todas las funciones de la plataforma obtienen los mismos resultados.",
+        "Los datos de fincas y cultivos viven en una base de datos relacional, que mantiene explícitas y consultables las relaciones entre fincas, uso del suelo y cultivos.",
+        "Los endpoints siguen las convenciones REST, lo que mantiene simples a los consumidores de la plataforma y facilita añadir nuevos cálculos."
+      ],
+      "results": [
+        "Planificación del uso del suelo y estimación de épocas de siembra disponibles para varias fincas.",
+        "Cifras de huella de carbono y evapotranspiración que respaldan las decisiones de riego y siembra."
+      ]
+    }
+  },
+  "notFound": {
+    "title": "404: ruta no encontrada",
+    "body": "Esta página no existe o se movió.",
+    "home": "Volver al inicio"
   },
   "footer": {
     "builtWith": "Hecho con Next.js y desplegado en Vercel."

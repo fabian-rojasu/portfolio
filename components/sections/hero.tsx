@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.25fr] lg:py-24"
+      className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-16 sm:px-10 lg:grid-cols-[1fr_1.25fr] lg:py-20"
     >
       <div className="flex flex-col gap-6">
         {profile.openToWork && (
@@ -45,16 +45,16 @@ export function Hero() {
         <p className="max-w-[46ch] text-lg leading-relaxed text-ink-dim">{t("intro")}</p>
         <div className="flex flex-wrap gap-3 text-sm">
           <a
-            href={profile.cv[locale]}
+            href="#work"
             className="bg-accent-strong px-5 py-3 font-semibold text-white transition-colors hover:bg-ink"
           >
-            {t("downloadCv")}
+            {t("seeWork")}
           </a>
           <a
-            href={`mailto:${profile.email}`}
+            href={profile.cv[locale]}
             className="border border-ink px-5 py-3 font-semibold transition-colors hover:bg-ink hover:text-on-ink"
           >
-            {t("email")}
+            {t("downloadCv")}
           </a>
         </div>
       </div>

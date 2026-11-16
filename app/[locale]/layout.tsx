@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
+import { profile } from "@/content/profile";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "../globals.css";
@@ -27,13 +30,17 @@ export function generateStaticParams() {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("metadata");
+  const locale = await getLocale();
   return {
-    metadataBase: new URL("https://fabian-rojas.vercel.app"),
-    title: t("title"),
+    metadataBase: new URL(profile.url),
+    title: { default: t("title"), template: `%s — ${profile.name}` },
     description: t("description"),
-    alternates: {
-      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+    openGraph: {
+      type: "website",
+      siteName: profile.name,
+      locale: locale === "es" ? "es_CR" : "en_US",
     },
+    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -48,6 +55,8 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
           <main className="flex flex-1 flex-col">{children}</main>
           <SiteFooter />
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
